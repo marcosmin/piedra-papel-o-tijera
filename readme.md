@@ -5,13 +5,12 @@ A continuación, se describe cómo funciona el juego, como ejecutarlo y los elem
 
 ## Capturas de Pantalla 📸
 
-![Captura 1](./imagenes/screenshot1.png)
+![Captura 1](./imagenes/screenshot1.jpg)
 
-![Captura 2](./imagenes/screenshot2.png)
+![Captura 2](./imagenes/screenshot2.jpg)
 
-![Captura 3](./imagenes/screenshot3.png)
+![Captura 3](./imagenes/screenshot3.jpg)
 
-![Captura 4](./imagenes/screenshot4.png)
 
 ## Cómo Jugar 🎮
 1. Al iniciar el juego, se te pedirá que ingreses tu nombre.
