@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Piedra Papel o Tijera</title>
+</head>
+
+
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+
+
+        <!-- título, Avatar del usuario y de la máquina -->
+        <div class="row">
+
+            <div class="avatar-usuario areaDeJuego">
+                <img src="./imagenes/usuario.png" alt="avatar usuario">
+            </div>
+
+            <div class="column titulo">
+                <p>PIEDRA PAPEL O TIJERA</p>
+            </div>
+
+            <div class="avatar-maquina areaDeJuego">
+                <img src="./imagenes/maquina.png" alt="avatar maquina">
+            </div>
+
+        </div>
+
+
+        <!-- Área de juego del usuario, datos del juego y área de juego de la máquina -->
+        <div class="row">
+            
+            <!-- Área de juego del usuario -->
+            <div class="column usuario areaDeJuego">
+
+                <!-- Barra de vida del usuario -->
+                <div class="barra-usuario">
+                    <div class="barra-verde"></div>
+                    <div class="barra-roja"></div>
+                </div>
+
+                <!-- Información del usuario -->
+                <div class="container-barra">
+                    <p class="nombre-usuario">USUARIO</p>
+                    <p class="puntos-usuario">0</p>
+                </div>
+
+                <!-- Visualización de la jugada del usuario -->
+                <div class="jugada">
+                    <img class="jugada-usuario-imagen" src="./imagenes/vacia.png" alt="jugada usuario">
+                    <p class="jugada-usuario-texto">. . .</p>
+                </div>
+
+            </div>
+
+
+            <!-- Datos del juego -->
+            <div class="datos">
+
+                <!-- Marcador de la ronda actual -->
+                <div class="marcador-round areaDeJuego">
+                    <p class="round">ROUND 1</p>
+                </div>
+
+                <!-- Mensaje de display -->
+                <div class="div-display">
+                    <p class="display">Hola! como te llamas?</p>
+                </div>
+
+                <!-- Campo de entrada para el nombre del usuario -->
+                <div class="nombre">
+                    <input class="input-nombre-usuario" type="text" value="">
+                </div>
+
+                <!-- Botón para jugar -->
+                <div class="jugar">
+                    <button class="boton-jugar">JUGAR</button>
+                </div>
+
+                <!-- Trofeo -->
+                <div class="trofeo">
+                    <img class="trofeo_imagen" src="./imagenes/trofeo.png" alt="trofeo">
+                </div>
+                
+                <!-- Game Over -->
+                <div class="game-over">
+                    <img class="gameover_imagen" src="./imagenes/game-over.png" alt="game over">
+                </div> 
+                
+            </div>
+
+
+            <!-- Área de juego de la máquina -->
+            <div class="column maquina areaDeJuego">
+
+                <!-- Barra de vida de la máquina -->
+                <div class="barra-maquina">
+                    <div class="barra-roja-maquina"></div>
+                    <div class="barra-verde-maquina"></div>
+                </div>
+
+                <!-- Información de la máquina -->
+                <div class="container-barra-maquina">
+                    <p class="puntos-maquina">0</p>
+                    <p class="nombre-maquina">MAQUINA</p>
+                </div>
+
+                <!-- Visualización de la jugada de la máquina -->
+                <div class="jugada">
+                    <img class="jugada-maquina-imagen" src="./imagenes/vacia.png" alt="jugada maquina">
+                    <p class="jugada-maquina-texto">. . .</p>
+                </div>
+
+            </div>
+
+        </div>
+        
+
+        <!-- Comentario para el usuario -->
+        <div class="row areaDeJuego">
+            <div></div>
+            <div class="comentario">
+                <p>Elije un ataque!</p>
+            </div>
+            <div></div>
+        </div>
+
+
+        <!-- Opciones de ataque -->
+        <div class="row-ataque areaDeJuego">
+
+            <!-- Botón para reiniciar el juego -->
+            <button class="reiniciar" type="button"><img src="./imagenes/reiniciar.png"/></button>
+            
+            <div></div>
+
+            <!-- Opciones de ataque: piedra, papel, tijera -->
+            <div class="piedra-usuario">
+                <a class="piedra-usuario-boton"> <img src="./imagenes/piedra-usuario-boton.png" alt="piedra"></a>
+            </div>
+
+            <div class="papel-usuario">
+               <a class="papel-usuario-boton"> <img src="./imagenes/papel-usuario-boton.png" alt="papel"></a>
+            </div>
+
+            <div class="tijera-usuario">
+                <a class="tijera-usuario-boton"> <img src="./imagenes/tijera-usuario-boton.png" alt="tijera"></a>
+            </div>
+
+            <div></div>
+
+            <!-- Botón para salir del juego -->
+            <button class="salir" type="button"><img src="./imagenes/salir.png"/></button>
+
+        </div>
+
+    </div>
+    
+
+    <!-- Elementos de audio utilizados en el juego -->
+    <audio src="./sonidos/click_play.wav" class="click_play" type="audio/mpeg"></audio>
+    <audio src="./sonidos/error_play.wav" class="error_play" type="audio/mpeg"></audio>
+    <audio src="./sonidos/eleccion_play.wav" class="eleccion_play" type="audio/mpeg"></audio>
+    <audio src="./sonidos/victoria_parcial.mp3" class="victoria_parcial" type="audio/mpeg"></audio>
+    <audio src="./sonidos/victoria_final.mp3" class="victoria_final" type="audio/mpeg"></audio>
+    <audio src="./sonidos/derrota_parcial.mp3" class="derrota_parcial" type="audio/mpeg"></audio>
+    <audio src="./sonidos/derrota_final.mp3" class="derrota_final" type="audio/mpeg"></audio>
+    <audio src="./sonidos/beep-hover.mp3" class="beep_hover" type="audio/mpeg" preload="auto"></audio>
+
+    
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="./script.js" type="text/javascript"></script>
+
+</body>
+
+</html>

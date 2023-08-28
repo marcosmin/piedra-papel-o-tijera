@@ -1,0 +1,444 @@
+body {
+    margin: 0px;
+    /* fondo con degradado */
+    background-color: #37015b;
+    background: linear-gradient(-45deg, #37015b, #3d0063, #6200a3, #5614c8);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor de fila */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Contenedor de columna */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del título */
+.titulo {
+    width: 35%;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-top: 75px solid #D9D9D9;
+}
+
+/* Estilos del texto del título */
+.titulo p {
+    color: #000000;
+    text-align: center;
+    margin-top: -61px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+/* Estilos compartidos para áreas de juego del usuario y la máquina */
+.usuario, .maquina{
+    width: 35%;
+    margin-top: 25px;
+}
+
+/* Estilos para el contenedor de datos o parte central */
+.datos {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el contenedor de la info del usuario */
+.container-barra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+
+}
+
+/* Estilos para el contenedor de la info de la maquina */
+.container-barra-maquina {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10%;
+
+}
+
+/* Estilos para la barra de vida del usuario */
+.barra-usuario {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+
+/* Estilos para la barra de vida de la maquina */
+.barra-maquina {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+}
+
+/* Estilos para la barra verde del usuario */
+.barra-verde {
+    width: 100%;
+    height: 40px; 
+    background: #04B200;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    transform: skew(-20deg);
+    border-left: 2px solid #D9D9D9;
+    border-top: 2px solid #D9D9D9;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+/* Estilos para la barra roja del usuario */
+.barra-roja {
+    width: 0%;
+    height: 40px; 
+    background: #b50000;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    transform: skew(-20deg);
+    border-right: 2px solid #D9D9D9;
+    border-top: 2px solid #D9D9D9;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+/* Estilos para la barra verde de la maquina */
+.barra-verde-maquina {
+    width: 100%; 
+    height: 40px; 
+    background: #04B200;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+    border-right: 2px solid #D9D9D9;
+    border-top: 2px solid #D9D9D9;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+/* Estilos para la barra roja de la maquina */
+.barra-roja-maquina {
+    width: 0%; 
+    height: 40px; 
+    background: #b50000;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+    border-left: 2px solid #D9D9D9;
+    border-top: 2px solid #D9D9D9;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+/* Estilos para los nombres de usuario y máquina */
+.nombre-usuario, .nombre-maquina {
+margin-top: 5px;
+margin-left: 15px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 35px;
+color: #fff;
+}
+
+/* Estilos para los puntos del usuario */
+.puntos-usuario {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height:70px;
+    font-size: 55px;
+    background-color: #D9D9D9;
+    margin-top: 0px;
+    margin-right: 40px;
+}
+
+/* Estilos para los puntos de la máquina */
+.puntos-maquina {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height:70px;
+    font-size: 55px;
+    background-color: #D9D9D9;
+    margin-top: 0px;
+    margin-left: 40px;
+}
+
+.jugada img{
+    width: 100%;
+}
+
+.jugada-usuario-imagen, .jugada-maquina-imagen {
+    visibility: hidden;
+    width: 100%;
+}
+
+.jugada-usuario-texto, .jugada-maquina-texto {
+    visibility: hidden;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el marcador de ronda */
+.marcador-round {
+    width: 200px;
+    height: 0px;
+    margin-top: 10px;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom: 70px solid #D9D9D9;
+}
+
+.marcador-round p {
+    color: #2b0147;
+    text-align: center;
+    margin-top: 17px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+
+/* Estilos para los campos de entrada */
+input {
+    color: #37015b;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    width: 80%;
+    border: 1px solid #fff;
+}
+
+.hola {
+    color: #fff;
+}
+
+/* Estilos para los mensajes de display */
+.display {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: #fff;
+    margin-top: 55px;
+}
+
+/* Estilos para areas de juego */
+.areaDeJuego {
+    visibility: hidden;
+}
+
+
+/* Estilos para el comentario */
+.comentario {
+    width: 20%;
+    height: 0px;
+    margin-top: -10px;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom: 50px solid #D9D9D9;
+}
+
+.comentario p {
+    color: #2b0147;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para opciones de ataque */
+.row-ataque {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: #D9D9D9;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+/* Estilos para los botones de opciones de ataque */
+.piedra-usuario, .papel-usuario, .tijera-usuario {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0px 20px 20px 20px;
+    cursor: pointer;
+}
+
+.piedra-usuario {
+    border: 2px solid #000000;
+    background-color: #029200;
+}
+
+.piedra-usuario:hover {
+    background: linear-gradient(-45deg, #66a100, #209300, #01ff2f);
+}
+
+.papel-usuario {
+    border: 2px solid #000000;
+    background-color: #ffc800;
+}
+
+.papel-usuario:hover {
+    background: linear-gradient(-45deg, #c8aa00, #ceaf01, #f7ff01);
+}
+
+.tijera-usuario {
+    border: 2px solid #000000;
+    background-color: #c70202;
+}
+
+.tijera-usuario:hover {
+    background: linear-gradient(-45deg, #a10000, #930000, #ff5930);
+}
+
+.piedra-usuario img, .papel-usuario img, .tijera-usuario img{
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+}
+
+.piedra-usuario img:hover, .papel-usuario img:hover, .tijera-usuario img:hover {
+    transform:scale(105%);
+}
+
+/* Estilos para el boton de reiniciar */
+.reiniciar {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-right: 200px;
+    background-color: #4d4d4d;
+    cursor: pointer;
+}
+
+.reiniciar:hover {
+    background-color: #b9a400;
+}
+
+.reiniciar img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el boton de salir */
+.salir {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 200px;
+    background-color: #4d4d4d;
+    cursor: pointer;
+}
+
+.salir:hover {
+    background-color: #b50000;
+}
+
+.salir img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el botón de jugar */
+.boton-jugar {
+    color: #2b0147;
+    background-color: rgb(255, 119, 0);
+    padding: 5px 15px;
+    margin-top: 30px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 20px;
+}
+
+.boton-jugar:hover {
+    background-color: rgb(255, 208, 0);
+}
+
+/* Estilos para las imagenes del trofeo y game over */
+.trofeo img, .game-over img {
+    display: none;
+    width: 70%;
+    margin-top: -140px;
+}
+
+/* Estilos para avatares de usuario y máquina */
+.avatar-usuario, .avatar-maquina {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid #45007e;
+    background-color: #45007e;
+    margin: 0px 20px 0px 20px;
+}
+
+.avatar-usuario img, .avatar-maquina img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para barras de vida segun resultado (rojo/verde) */
+.rojoUsuario3, .rojoMaquina3, .verdeUsuario0, .rojoMaquina0 {
+    width: 100%;
+}
+
+.verdeUsuario1, .rojoUsuario2, .verdeMaquina1, .rojoMaquina2 {
+    width: 100%;
+}
+
+.verdeUsuario2, .rojoUsuario1, .verdeMaquina2, .rojoMaquina1 {
+    width: 50%;
+}
+
+.verdeUsuario3, .verdeMaquina3 {
+    width: 100%;
+    background: #b50000;
+}
+
+.rojoUsuario0, .rojoMaquina0 {
+    width: 0%;
+}
